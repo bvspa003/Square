@@ -1,0 +1,205 @@
+/* Square Transport Design System - Dark Minimalistic Theme */
+
+:root {
+  /* === COLOR PALETTE - Minimalist Black Theme === */
+  /* Primary - Pure Grayscale */
+  --color-primary: #ffffff;
+  --color-primary-light: #f5f5f5;
+  --color-primary-dark: #e0e0e0;
+  --color-primary-50: rgba(255, 255, 255, 0.05);
+  --color-primary-100: rgba(255, 255, 255, 0.1);
+  --color-primary-900: rgba(255, 255, 255, 0.9);
+  
+  /* Secondary - Dark Grays */
+  --color-secondary: #1a1a1a;
+  --color-secondary-light: #333333;
+  --color-secondary-dark: #000000;
+  
+  /* Accent - Light Gray */
+  --color-accent: #cccccc;
+  --color-accent-light: #e0e0e0;
+  --color-accent-dark: #999999;
+  
+  /* Dark Theme Neutrals */
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  --color-black: #000000;
+  
+  /* Background Colors - Dark Theme */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #111111;
+  --color-bg-tertiary: #1a1a1a;
+  --color-bg-card: #1e1e1e;
+  --color-bg-hover: #2a2a2a;
+  
+  /* Text Colors - Dark Theme */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #888888;
+  --color-text-inverse: #000000;
+  
+  /* Status Colors */
+  --color-success: #ffffff;
+  --color-warning: #cccccc;
+  --color-error: #888888;
+  --color-info: var(--color-accent);
+  
+  /* === TYPOGRAPHY === */
+  /* Font Families */
+  --font-family-primary: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-heading: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Font Sizes - Fluid Typography */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+  --font-size-6xl: clamp(3.75rem, 3rem + 3.75vw, 5rem);
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* === SPACING SYSTEM === */
+  --spacing-unit: 8px;
+  --spacing-0: 0;
+  --spacing-1: calc(var(--spacing-unit) * 0.25); /* 2px */
+  --spacing-2: calc(var(--spacing-unit) * 0.5);  /* 4px */
+  --spacing-3: var(--spacing-unit);              /* 8px */
+  --spacing-4: calc(var(--spacing-unit) * 1.5);  /* 12px */
+  --spacing-5: calc(var(--spacing-unit) * 2);    /* 16px */
+  --spacing-6: calc(var(--spacing-unit) * 2.5);  /* 20px */
+  --spacing-7: calc(var(--spacing-unit) * 3);    /* 24px */
+  --spacing-8: calc(var(--spacing-unit) * 4);    /* 32px */
+  --spacing-9: calc(var(--spacing-unit) * 5);    /* 40px */
+  --spacing-10: calc(var(--spacing-unit) * 6);   /* 48px */
+  --spacing-11: calc(var(--spacing-unit) * 7);   /* 56px */
+  --spacing-12: calc(var(--spacing-unit) * 8);   /* 64px */
+  --spacing-16: calc(var(--spacing-unit) * 12);  /* 96px */
+  --spacing-20: calc(var(--spacing-unit) * 16);  /* 128px */
+  --spacing-24: calc(var(--spacing-unit) * 20);  /* 160px */
+  --spacing-32: calc(var(--spacing-unit) * 24);  /* 192px */
+  
+  /* === CONTAINER & LAYOUT === */
+  --container-max-width: 1280px;
+  --container-padding: var(--spacing-5);
+  
+  /* Responsive Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* === BORDER RADIUS === */
+  --border-radius-none: 0;
+  --border-radius-sm: 4px;
+  --border-radius-base: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 9999px;
+  
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* === ANIMATION & TRANSITIONS === */
+  /* Durations - Based on Material Design */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 750ms;
+  
+  /* Timing Functions */
+  --ease-linear: linear;
+  --ease-in: ease-in;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* === Z-INDEX LAYERS === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1040;
+  --z-popover: 1050;
+  --z-tooltip: 1060;
+  --z-toast: 1070;
+  
+  /* === COMPONENT-SPECIFIC === */
+  /* Header */
+  --header-height: 72px;
+  --header-height-mobile: 64px;
+  
+  /* Buttons */
+  --button-height: 44px;
+  --button-height-sm: 36px;
+  --button-height-lg: 52px;
+  
+  /* Form Elements */
+  --input-height: 44px;
+  --input-border-width: 1px;
+  --input-focus-ring: 0 0 0 3px var(--color-primary-100);
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-white: #1f2937;
+    --color-gray-50: #374151;
+    --color-gray-100: #4b5563;
+    --color-gray-900: #f9fafb;
+  }
+}
+
+/* === REDUCED MOTION SUPPORT === */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

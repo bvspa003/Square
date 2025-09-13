@@ -1,0 +1,24 @@
+{
+  "name": "square-transport-website",
+  "version": "1.0.0",
+  "description": "Square Transport Startup Website - AI-powered delivery robots",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "python run_app.py"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "framer-motion": "^10.16.4"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "vite-plugin-html": "^3.2.0",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29"
+  },
+  "keywords": ["delivery", "robots", "AI", "startup", "swedish", "transport"],
+  "author": "Square Transport Team",
+  "license": "MIT"
+}

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the passionate team behind Square Transport's autonomous delivery revolution - experienced innovators from Swedish tech, AI, and logistics industries.">
+    <meta name="keywords" content="Square Transport team, Swedish robotics engineers, AI delivery experts, autonomous vehicle founders, Stockholm tech startup">
+    
+    <title>About Us - Square Transport | Meet the Team Behind AI Delivery Innovation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Header -->
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="nav__brand" aria-label="Square Transport Home">
+                <div class="nav__logo-text">⬛</div>
+                <span class="nav__brand-text">Square</span>
+            </a>
+            
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="/" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/overview" class="nav__link">Overview</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/about" class="nav__link nav__link--active" aria-current="page">About</a>
+                </li>
+            </ul>
+            
+            <div class="nav__cta">
+                <a href="#contact" class="btn btn--primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div class="nav__menu--mobile" id="nav-mobile">
+            <a href="/" class="nav__link">Home</a>
+            <a href="/overview" class="nav__link">Overview</a>
+            <a href="/about" class="nav__link">About</a>
+            <a href="#contact" class="btn btn--primary">Get Started</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <h1 class="about-hero__title animate scroll-reveal">
+                    Young innovators building the future of delivery
+                </h1>
+                <p class="about-hero__subtitle animate scroll-reveal">
+                    We're a team of university students and recent graduates from Sweden who believe 
+                    we can make delivery better for everyone using smart technology.
+                </p>
+                <div class="about-hero__stats animate scroll-reveal">
+                    <div class="stat">
+                        <div class="stat__number">5</div>
+                        <div class="stat__label">Team Members</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">2</div>
+                        <div class="stat__label">Years Building</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">1</div>
+                        <div class="stat__label">Award Won</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Story -->
+        <section class="section story">
+            <div class="container">
+                <div class="story__grid">
+                    <div class="story__content animate scroll-reveal">
+                        <h2 class="story__title">Our Story</h2>
+                        <p class="story__text">
+                            Square Transport started when we noticed that delivery trucks cause traffic jams 
+                            and pollution in our cities. We thought there had to be a better way.
+                        </p>
+                        <p class="story__text">
+                            Started in Stockholm in 2022, we're a group of university students studying 
+                            engineering and computer science. We're learning how to build robots and AI 
+                            systems while working on this project.
+                        </p>
+                        <p class="story__text">
+                            We're excited to be part of changing how delivery works, combining what we're 
+                            learning in school with real-world problem solving.
+                        </p>
+                    </div>
+                    <div class="story__visual animate scroll-reveal scroll-reveal--right">
+                        <div style="padding: 2rem; text-align: center;">
+                            <div style="width: 300px; height: 220px; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); border-radius: 20px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; position: relative; overflow: hidden;">
+                                🏢
+                                <div style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🇸🇪</div>
+                                <div style="position: absolute; bottom: 20px; left: 20px; background: var(--color-success); border-radius: 12px; padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: bold;">EST. 2022</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Leadership Team -->
+        <section class="section team">
+            <div class="container">
+                <h2 style="text-align: center !important; color: #ffffff !important; font-size: 2.5rem !important; font-weight: bold !important; margin: 0 auto 3rem auto !important; width: 100% !important;">Leadership Team</h2>
+                
+                <div class="team-grid">
+                    <!-- CEO First -->
+                    <div class="team-member animate scroll-reveal stagger-1">
+                        <div class="team-member__avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto;">Z</div>
+                        </div>
+                        <h3 class="team-member__name">Zainab Fatima Bokhari</h3>
+                        <p style="color: #e5e5e5 !important; text-align: center !important; font-size: 14px !important; margin: 0.5rem auto 1rem auto !important; width: 100% !important; display: block !important; box-sizing: border-box !important; padding: 0 !important; max-width: none !important; min-width: 100% !important;">CEO & Co-Founder</p>
+                        <p class="team-member__bio">
+                            Business and design student who manages our company operations and customer relationships. 
+                            Zainab handles business development, partnerships, and ensures our product meets market needs.
+                        </p>
+                        <div class="team-member__background">
+                            <strong>Focus:</strong> Business Operations, Market Strategy<br>
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/zainab-fatima-bokhari/" target="_blank">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <!-- COO Second -->
+                    <div class="team-member animate scroll-reveal stagger-2">
+                        <div class="team-member__avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-secondary), var(--color-primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto;">D</div>
+                        </div>
+                        <h3 class="team-member__name">Deepak Bellikatti</h3>
+                        <p style="color: #cccccc !important; text-align: center !important; font-size: 14px !important; margin: 0.5rem auto 1rem auto !important; width: 100% !important; display: block !important; box-sizing: border-box !important; padding: 0 !important; max-width: none !important; min-width: 100% !important;">COO & Co-Founder</p>
+                        <p class="team-member__bio">
+                            Mechanical engineering student specializing in robotics and computer vision systems. Deepak 
+                            develops the visual recognition technology and obstacle avoidance algorithms.
+                        </p>
+                        <div class="team-member__background">
+                            <strong>Focus:</strong> Computer Vision, Robotics Engineering<br>
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/deepak-bellikatti/" target="_blank">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <!-- CTO Third -->
+                    <div class="team-member animate scroll-reveal stagger-3">
+                        <div class="team-member__avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-success), var(--color-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto;">P</div>
+                        </div>
+                        <h3 class="team-member__name">Prajwal Palled</h3>
+                        <p style="color: #b3b3b3 !important; text-align: center !important; font-size: 14px !important; margin: 0.5rem auto 1rem auto !important; width: 100% !important; display: block !important; box-sizing: border-box !important; padding: 0 !important; max-width: none !important; min-width: 100% !important;">CTO & Co-Founder</p>
+                        <p class="team-member__bio">
+                            Mechanical engineering student focusing on robotics operations and logistics optimization. Prajwal 
+                            develops route mapping algorithms and manages the operational deployment of our robots.
+                        </p>
+                        <div class="team-member__background">
+                            <strong>Focus:</strong> Route Mapping, Robotics Operations<br>
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/prajwal-palled-849502231/" target="_blank">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <!-- CPO Fourth -->
+                    <div class="team-member animate scroll-reveal stagger-4">
+                        <div class="team-member__avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto;">A</div>
+                        </div>
+                        <h3 class="team-member__name">Aditya Mocherla</h3>
+                        <p style="color: #d9d9d9 !important; text-align: center !important; font-size: 14px !important; margin: 0.5rem auto 1rem auto !important; width: 100% !important; display: block !important; box-sizing: border-box !important; padding: 0 !important; max-width: none !important; min-width: 100% !important;">CPO & Co-Founder</p>
+                        <p class="team-member__bio">
+                            Mechanical engineering student leading our AI and robotics development. Aditya manages 
+                            the technical team and develops the core AI algorithms for autonomous navigation.
+                        </p>
+                        <div class="team-member__background">
+                            <strong>Focus:</strong> AI Development, Robotics Programming<br>
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aditya-mocherla-0978b022a/" target="_blank">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member animate scroll-reveal stagger-5">
+                        <div class="team-member__avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-warning), var(--color-secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto;">V</div>
+                        </div>
+                        <h3 class="team-member__name">Venkata Sai Bhamidipati</h3>
+                        <p style="color: #a6a6a6 !important; text-align: center !important; font-size: 14px !important; margin: 0.5rem auto 1rem auto !important; width: 100% !important; display: block !important; box-sizing: border-box !important; padding: 0 !important; max-width: none !important; min-width: 100% !important;">Software Product Advisor</p>
+                        <p class="team-member__bio">
+                            Technology student providing strategic guidance on the software aspects of our product. 
+                            Venkata advises on software architecture, product features, and technical implementation approaches.
+                        </p>
+                        <div class="team-member__background">
+                            <strong>Focus:</strong> Software Strategy, Product Development<br>
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bvspa003/" target="_blank">Connect</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Company Values -->
+        <section class="section values">
+            <div class="container">
+                <h2 class="values__title animate scroll-reveal">Our Values</h2>
+                
+                <div class="values-grid">
+                    <div class="value-card animate scroll-reveal stagger-1">
+                        <div class="value-card__icon">🌱</div>
+                        <h3 class="value-card__title">Sustainability First</h3>
+                        <p class="value-card__description">
+                            Every decision we make considers environmental impact. From our electric-powered 
+                            robots to our recyclable materials, sustainability is woven into our DNA.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card animate scroll-reveal stagger-2">
+                        <div class="value-card__icon">🔬</div>
+                        <h3 class="value-card__title">Innovation Excellence</h3>
+                        <p class="value-card__description">
+                            We push the boundaries of what's possible with AI and robotics, constantly 
+                            iterating and improving to deliver breakthrough technology solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card animate scroll-reveal stagger-3">
+                        <div class="value-card__icon">🤝</div>
+                        <h3 class="value-card__title">Collaborative Spirit</h3>
+                        <p class="value-card__description">
+                            We believe the best solutions emerge from diverse perspectives working together. 
+                            Collaboration fuels our creativity and drives our success.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card animate scroll-reveal stagger-4">
+                        <div class="value-card__icon">🎯</div>
+                        <h3 class="value-card__title">Customer Focus</h3>
+                        <p class="value-card__description">
+                            Our customers' needs guide every product decision. We build not just for today, 
+                            but for the evolving needs of tomorrow's delivery landscape.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card animate scroll-reveal stagger-5">
+                        <div class="value-card__icon">⚡</div>
+                        <h3 class="value-card__title">Rapid Execution</h3>
+                        <p class="value-card__description">
+                            Speed matters in the startup world. We move fast, learn quickly, and adapt 
+                            rapidly to bring our vision to market efficiently.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card animate scroll-reveal stagger-6">
+                        <div class="value-card__icon">🛡️</div>
+                        <h3 class="value-card__title">Safety & Security</h3>
+                        <p class="value-card__description">
+                            Safety is never compromised. From robust AI safety measures to secure delivery 
+                            protocols, we prioritize the wellbeing of our communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievements -->
+        <section class="section achievements">
+            <div class="container">
+                <h2 class="achievements__title animate scroll-reveal">Recognition & Achievements</h2>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card animate scroll-reveal stagger-1">
+                        <div class="achievement-card__icon">🏆</div>
+                        <h3 class="achievement-card__title">Innovatum Science Park Startup Challenge Winner</h3>
+                        <p class="achievement-card__description">
+                            Won the prestigious startup challenge with AI-based delivery robots at Innovatum Science Park.
+                        </p>
+                        <div class="achievement-card__date">2025</div>
+                        <div class="achievement-card__link">
+                            <a href="https://innovatumsciencepark.se/en/news/square-vinner-startup-challenge-med-ai-baserade-leveransrobotar/" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card animate scroll-reveal stagger-2">
+                        <div class="achievement-card__icon">�</div>
+                        <h3 class="achievement-card__title">LinkedIn Startup Spotlight</h3>
+                        <p class="achievement-card__description">
+                            Featured on LinkedIn for winning the startup challenge with innovative AI-based delivery solutions.
+                        </p>
+                        <div class="achievement-card__date">2025</div>
+                        <div class="achievement-card__link">
+                            <a href="https://www.linkedin.com/pulse/square-wins-startup-challenge-ai-based-xt6if/" target="_blank">Read Article</a>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card animate scroll-reveal stagger-3">
+                        <div class="achievement-card__icon">📱</div>
+                        <h3 class="achievement-card__title">Social Media Recognition</h3>
+                        <p class="achievement-card__description">
+                            Viral social media coverage highlighting our breakthrough in autonomous delivery technology.
+                        </p>
+                        <div class="achievement-card__date">2025</div>
+                        <div class="achievement-card__link">
+                            <a href="https://www.instagram.com/p/DJ_qEpBRvlX/" target="_blank">View Post</a>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card animate scroll-reveal stagger-4">
+                        <div class="achievement-card__icon">🤖</div>
+                        <h3 class="achievement-card__title">AI Innovation Award</h3>
+                        <p class="achievement-card__description">
+                            Recognized for breakthrough vision-only navigation technology in autonomous delivery systems.
+                        </p>
+                        <div class="achievement-card__date">2025</div>
+                    </div>
+                    
+                    <div class="achievement-card animate scroll-reveal stagger-5">
+                        <div class="achievement-card__icon">📜</div>
+                        <h3 class="achievement-card__title">Patent Portfolio</h3>
+                        <p class="achievement-card__description">
+                            Filed multiple patents covering core innovations in autonomous navigation and delivery systems.
+                        </p>
+                        <div class="achievement-card__date">2024-2025</div>
+                    </div>
+                    
+                    <div class="achievement-card animate scroll-reveal stagger-6">
+                        <div class="achievement-card__icon">�</div>
+                        <h3 class="achievement-card__title">Sustainability Pioneer</h3>
+                        <p class="achievement-card__description">
+                            Leading the charge in sustainable urban delivery with 90% carbon reduction technology.
+                        </p>
+                        <div class="achievement-card__date">2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Investors & Partners -->
+        <section class="section partners">
+            <div class="container">
+                <h2 class="partners__title animate scroll-reveal">Investors & Partners</h2>
+                <p class="partners__subtitle animate scroll-reveal">
+                    We're proud to work alongside leading investors and partners who share our vision 
+                    for transforming urban delivery.
+                </p>
+                
+                <div class="partners-categories">
+                    <!-- Investors -->
+                    <div class="partners-category animate scroll-reveal">
+                        <h3 class="partners-category__title">Lead Investors</h3>
+                        <div class="partners-list">
+                            <div class="partner-item">
+                                <div class="partner-item__logo">💼</div>
+                                <div class="partner-item__name">Nordic Capital Ventures</div>
+                                <div class="partner-item__description">Lead Series A investor</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">🚀</div>
+                                <div class="partner-item__name">EQT Ventures</div>
+                                <div class="partner-item__description">Strategic technology investor</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">⚡</div>
+                                <div class="partner-item__name">Creandum</div>
+                                <div class="partner-item__description">Early-stage backer</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategic Partners -->
+                    <div class="partners-category animate scroll-reveal">
+                        <h3 class="partners-category__title">Strategic Partners</h3>
+                        <div class="partners-list">
+                            <div class="partner-item">
+                                <div class="partner-item__logo">🏪</div>
+                                <div class="partner-item__name">ICA Group</div>
+                                <div class="partner-item__description">Grocery delivery partnership</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">📦</div>
+                                <div class="partner-item__name">PostNord</div>
+                                <div class="partner-item__description">Last-mile logistics collaboration</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">🏙️</div>
+                                <div class="partner-item__name">City of Stockholm</div>
+                                <div class="partner-item__description">Urban mobility pilot program</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technology Partners -->
+                    <div class="partners-category animate scroll-reveal">
+                        <h3 class="partners-category__title">Technology Partners</h3>
+                        <div class="partners-list">
+                            <div class="partner-item">
+                                <div class="partner-item__logo">🖥️</div>
+                                <div class="partner-item__name">NVIDIA</div>
+                                <div class="partner-item__description">AI computing platform</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">🏫</div>
+                                <div class="partner-item__name">KTH Royal Institute</div>
+                                <div class="partner-item__description">Research & development</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-item__logo">☁️</div>
+                                <div class="partner-item__name">Microsoft Azure</div>
+                                <div class="partner-item__description">Cloud infrastructure</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Join Our Team -->
+        <section class="section careers">
+            <div class="container">
+                <div class="careers__content animate scroll-reveal">
+                    <h2 class="careers__title">Join Our Team</h2>
+                    <p class="careers__description">
+                        We're always looking for talented individuals who share our passion for innovation 
+                        and sustainable technology. Join us in building the future of urban delivery.
+                    </p>
+                    
+                    <div class="careers__openings">
+                        <h3 class="careers__openings-title">Open Positions</h3>
+                        <div class="job-listings">
+                            <div class="job-item animate scroll-reveal stagger-1">
+                                <div class="job-item__role">Senior AI Engineer</div>
+                                <div class="job-item__department">Engineering</div>
+                                <div class="job-item__location">Stockholm</div>
+                            </div>
+                            <div class="job-item animate scroll-reveal stagger-2">
+                                <div class="job-item__role">Robotics Hardware Engineer</div>
+                                <div class="job-item__department">Engineering</div>
+                                <div class="job-item__location">Stockholm</div>
+                            </div>
+                            <div class="job-item animate scroll-reveal stagger-3">
+                                <div class="job-item__role">Product Manager</div>
+                                <div class="job-item__department">Product</div>
+                                <div class="job-item__location">Stockholm</div>
+                            </div>
+                            <div class="job-item animate scroll-reveal stagger-4">
+                                <div class="job-item__role">Operations Specialist</div>
+                                <div class="job-item__department">Operations</div>
+                                <div class="job-item__location">Stockholm/Remote</div>
+                            </div>
+                        </div>
+                        
+                        <div class="careers__cta">
+                            <a href="mailto:careers@square-transport.com" class="btn btn--primary btn--lg">
+                                View All Positions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Information -->
+        <section class="section contact-info" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-content animate scroll-reveal">
+                        <h2 class="contact-content__title">Get in Touch</h2>
+                        <p class="contact-content__description">
+                            Ready to partner with us or learn more about our technology? 
+                            We'd love to hear from you.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-method__icon">📧</div>
+                                <div class="contact-method__content">
+                                    <h3 class="contact-method__title">General Inquiries</h3>
+                                    <a href="mailto:hello@square-transport.com" class="contact-method__link">
+                                        hello@square-transport.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">🤝</div>
+                                <div class="contact-method__content">
+                                    <h3 class="contact-method__title">Partnerships</h3>
+                                    <a href="mailto:partnerships@square-transport.com" class="contact-method__link">
+                                        partnerships@square-transport.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">📰</div>
+                                <div class="contact-method__content">
+                                    <h3 class="contact-method__title">Press & Media</h3>
+                                    <a href="mailto:press@square-transport.com" class="contact-method__link">
+                                        press@square-transport.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">💼</div>
+                                <div class="contact-method__content">
+                                    <h3 class="contact-method__title">Careers</h3>
+                                    <a href="mailto:careers@square-transport.com" class="contact-method__link">
+                                        careers@square-transport.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="office-info">
+                            <h3 class="office-info__title">Stockholm Office</h3>
+                            <address class="office-info__address">
+                                Square Transport AB<br>
+                                Kungsgatan 12<br>
+                                111 35 Stockholm<br>
+                                Sweden
+                            </address>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-visual animate scroll-reveal scroll-reveal--right">
+                        <div style="padding: 2rem; text-align: center;">
+                            <div style="width: 280px; height: 200px; background: linear-gradient(135deg, var(--color-secondary), var(--color-primary)); border-radius: 20px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; position: relative; overflow: hidden;">
+                                🏢
+                                <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border-radius: 8px; padding: 0.5rem; font-size: 1rem; font-weight: bold;">Stockholm</div>
+                                <div style="position: absolute; bottom: 15px; left: 15px; background: var(--color-success); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="section" style="background: var(--color-gray-900); color: var(--color-white); padding: var(--spacing-12) 0 var(--spacing-6);">
+        <div class="container">
+            <div class="text-center">
+                <div style="display: flex; align-items: center; justify-content: center; gap: var(--spacing-3); margin-bottom: var(--spacing-4);">
+                    <div style="color: var(--color-secondary);">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="currentColor">
+                            <rect x="8" y="8" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <rect x="12" y="12" width="16" height="16" rx="2" fill="currentColor"/>
+                            <circle cx="20" cy="20" r="3" fill="white"/>
+                        </svg>
+                    </div>
+                    <span style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold);">Square Transport</span>
+                </div>
+                
+                <p style="color: var(--color-gray-400); margin-bottom: var(--spacing-6); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Revolutionizing last-mile delivery with AI-powered autonomous robots. 
+                    Swedish innovation for a sustainable future.
+                </p>
+                
+                <div style="display: flex; justify-content: center; gap: var(--spacing-6); margin-bottom: var(--spacing-6); flex-wrap: wrap;">
+                    <a href="/" style="color: var(--color-gray-400); text-decoration: none;">Home</a>
+                    <a href="/overview" style="color: var(--color-gray-400); text-decoration: none;">Overview</a>
+                    <a href="/about" style="color: var(--color-gray-400); text-decoration: none;">About</a>
+                    <a href="mailto:hello@square-transport.com" style="color: var(--color-gray-400); text-decoration: none;">Contact</a>
+                </div>
+                
+                <div style="border-top: 1px solid var(--color-gray-800); padding-top: var(--spacing-4); color: var(--color-gray-400); font-size: var(--font-size-sm);">
+                    <p>&copy; 2025 Square Transport. All rights reserved. Made with ❤️ in Sweden.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* Square Transport Website - Button Components
+   Consistent, accessible buttons with Swedish design aesthetics */
+
+/* === BASE BUTTON STYLES === */
+.btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  
+  /* Typography */
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Visual */
+  min-height: var(--button-height);
+  padding: 0 var(--spacing-6);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  user-select: none;
+  
+  /* Animation */
+  transition: all var(--duration-fast) var(--ease-smooth);
+  
+  /* Accessibility */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* === BUTTON VARIANTS === */
+/* Primary Button - Minimalist White */
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-white), var(--color-accent-light));
+  color: var(--color-black);
+  border-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Secondary Button - Outlined */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-white);
+  border-width: 2px;
+}
+
+.btn--secondary:hover {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Tertiary Button - Ghost */
+.btn--tertiary {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+
+.btn--tertiary:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+/* Success Button */
+.btn--success {
+  background: linear-gradient(135deg, var(--color-success), #059669);
+  color: var(--color-white);
+  border-color: var(--color-success);
+}
+
+.btn--success:hover {
+  background: linear-gradient(135deg, #059669, var(--color-success));
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* Warning Button */
+.btn--warning {
+  background: linear-gradient(135deg, var(--color-warning), var(--color-secondary-dark));
+  color: var(--color-white);
+  border-color: var(--color-warning);
+}
+
+.btn--warning:hover {
+  background: linear-gradient(135deg, var(--color-secondary-dark), var(--color-warning));
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* === BUTTON SIZES === */
+.btn--sm {
+  min-height: var(--button-height-sm);
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  gap: var(--spacing-2);
+}
+
+.btn--lg {
+  min-height: var(--button-height-lg);
+  padding: 0 var(--spacing-8);
+  font-size: var(--font-size-lg);
+  gap: var(--spacing-4);
+}
+
+/* === BUTTON MODIFIERS === */
+/* Full Width */
+.btn--full {
+  width: 100%;
+}
+
+/* Icon Only */
+.btn--icon-only {
+  min-width: var(--button-height);
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.btn--icon-only.btn--sm {
+  min-width: var(--button-height-sm);
+}
+
+.btn--icon-only.btn--lg {
+  min-width: var(--button-height-lg);
+}
+
+/* With Icon */
+.btn--with-icon-left {
+  padding-left: var(--spacing-5);
+}
+
+.btn--with-icon-right {
+  padding-right: var(--spacing-5);
+}
+
+/* === BUTTON GROUPS === */
+.btn-group {
+  display: inline-flex;
+  gap: var(--spacing-2);
+}
+
+.btn-group--vertical {
+  flex-direction: column;
+}
+
+.btn-group--attached .btn {
+  border-radius: 0;
+}
+
+.btn-group--attached .btn:first-child {
+  border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+}
+
+.btn-group--attached .btn:last-child {
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.btn-group--attached.btn-group--vertical .btn:first-child {
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.btn-group--attached.btn-group--vertical .btn:last-child {
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+}
+
+/* === SPECIAL BUTTON STYLES === */
+/* CTA Button with Animation */
+.btn--cta {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-white), var(--color-accent));
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.btn--cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--duration-slow) var(--ease-smooth);
+}
+
+.btn--cta:hover::before {
+  left: 100%;
+}
+
+.btn--cta:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}
+
+/* Floating Action Button */
+.btn--fab {
+  position: fixed;
+  bottom: var(--spacing-8);
+  right: var(--spacing-8);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-full);
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-fixed);
+}
+
+.btn--fab:hover {
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 640px) {
+  .btn {
+    min-height: 48px; /* Minimum touch target size */
+  }
+  
+  .btn--sm {
+    min-height: 40px;
+  }
+  
+  .btn--lg {
+    min-height: 56px;
+  }
+  
+  /* Stack button groups on mobile */
+  .btn-group--mobile-stack {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group--mobile-stack .btn {
+    width: 100%;
+  }
+}
+
+/* === LOADING STATE === */
+.btn--loading {
+  pointer-events: none;
+  position: relative;
+  color: transparent;
+}
+
+.btn--loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--border-radius-full);
+  animation: btn-spin 1s linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  
+  .btn--cta::before {
+    display: none;
+  }
+  
+  .btn--loading::after {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn {
+    border-width: 2px;
+  }
+  
+  .btn--primary {
+    border-color: var(--color-white);
+  }
+  
+  .btn--secondary {
+    background: var(--color-white);
+    border-color: var(--color-gray-900);
+  }
+}

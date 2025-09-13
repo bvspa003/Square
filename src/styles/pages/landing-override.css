@@ -1,0 +1,36 @@
+/* NUCLEAR BLACK THEME OVERRIDE - Place at end of landing.css */
+
+/* Force black background with highest specificity */
+body.hero section.hero.hero--landing,
+section.hero.hero--landing,
+.hero.hero--landing,
+.hero--landing {
+  background: #000000 !important;
+  background-image: none !important;
+  background-color: #000000 !important;
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-origin: padding-box !important;
+  background-position: 0% 0% !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+}
+
+/* Remove any gradients from pseudo-elements */
+.hero--landing::before,
+.hero--landing::after {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Force white text */
+.hero--landing,
+.hero--landing * {
+  color: #ffffff !important;
+}
+
+/* Override any gradient backgrounds on the hero grid */
+.hero__grid--landing {
+  background: transparent !important;
+  background-image: none !important;
+}

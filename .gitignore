@@ -1,0 +1,11 @@
+# Python virtual environment
+venv/
+
+# Node.js dependencies (if needed later)
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env

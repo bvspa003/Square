@@ -1,0 +1,393 @@
+/* Square Transport Website - Navigation Components
+   Responsive, accessible navigation with Swedish design principles */
+
+/* === MAIN NAVIGATION === */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+  height: var(--header-height);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-gray-800);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.nav--scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+/* === LOGO/BRAND === */
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.nav__brand:hover {
+  color: #cccccc;
+}
+
+.nav__brand:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+.nav__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* === NAVIGATION MENU === */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--border-radius-base);
+  transition: all var(--duration-fast) var(--ease-smooth);
+  position: relative;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Active link indicator */
+.nav__link--active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: var(--border-radius-full);
+}
+
+/* === CTA BUTTON IN NAVIGATION === */
+.nav__cta {
+  margin-left: var(--spacing-4);
+}
+
+/* === MOBILE NAVIGATION === */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: var(--z-modal);
+}
+
+.nav__toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Hamburger icon */
+.nav__toggle-line {
+  width: 24px;
+  height: 2px;
+  background: var(--color-gray-700);
+  border-radius: var(--border-radius-full);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  transform-origin: center;
+}
+
+.nav__toggle-line:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* Hamburger animation to X */
+.nav__toggle--active .nav__toggle-line:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.nav__toggle--active .nav__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle--active .nav__toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* === MOBILE MENU OVERLAY === */
+.nav__menu--mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  z-index: var(--z-fixed);
+}
+
+.nav__menu--mobile.nav__menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__menu--mobile .nav__link {
+  font-size: var(--font-size-xl);
+  padding: var(--spacing-4) var(--spacing-6);
+}
+
+/* === BREADCRUMB NAVIGATION === */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.breadcrumb__link {
+  color: var(--color-gray-600);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.breadcrumb__link:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb__separator {
+  color: var(--color-gray-400);
+  user-select: none;
+}
+
+.breadcrumb__current {
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === SIDEBAR NAVIGATION === */
+.nav--sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background: var(--color-white);
+  border-right: 1px solid var(--color-gray-200);
+  padding: var(--spacing-6);
+  overflow-y: auto;
+  z-index: var(--z-sticky);
+  transform: translateX(-100%);
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.nav--sidebar.nav--sidebar-open {
+  transform: translateX(0);
+}
+
+.nav--sidebar .nav__menu {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-2);
+}
+
+.nav--sidebar .nav__link {
+  justify-content: flex-start;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius-base);
+}
+
+/* === PAGINATION NAVIGATION === */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin: var(--spacing-8) 0;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 var(--spacing-3);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-base);
+  color: var(--color-gray-700);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.pagination__item:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.pagination__item--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.pagination__item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .nav__menu {
+    display: none;
+  }
+  
+  .nav__toggle {
+    display: flex;
+  }
+  
+  .nav {
+    height: var(--header-height-mobile);
+  }
+  
+  .nav--sidebar {
+    top: var(--header-height-mobile);
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 0 var(--spacing-4);
+  }
+  
+  .nav__brand {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav__logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .breadcrumb {
+    font-size: var(--font-size-xs);
+    gap: var(--spacing-1);
+  }
+  
+  .pagination {
+    gap: var(--spacing-1);
+  }
+  
+  .pagination__item {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 var(--spacing-2);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .nav__link,
+  .nav__toggle-line,
+  .nav__menu--mobile,
+  .nav--sidebar {
+    transition: none;
+  }
+}
+
+/* Skip navigation for screen readers */
+.nav__skip {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--border-radius-base);
+  text-decoration: none;
+  z-index: var(--z-tooltip);
+  transition: top var(--duration-fast) var(--ease-smooth);
+}
+
+.nav__skip:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .nav {
+    border-bottom-width: 2px;
+  }
+  
+  .nav__link:focus {
+    outline-width: 3px;
+  }
+}

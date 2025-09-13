@@ -1,0 +1,111 @@
+/* BLACK THEME OVERRIDE - LOADS LAST TO FORCE BLACK BACKGROUND */
+
+/* Force black background on everything */
+html {
+  background: #000000 !important;
+  background-image: none !important;
+  background-color: #000000 !important;
+}
+
+body {
+  background: #000000 !important;
+  background-image: none !important;
+  background-color: #000000 !important;
+}
+
+section, .section {
+  background: #000000 !important;
+  background-image: none !important;
+  background-color: #000000 !important;
+}
+
+.hero, .hero--landing {
+  background: #000000 !important;
+  background-image: none !important;
+  background-color: #000000 !important;
+}
+
+/* Force all pseudo-elements to be transparent */
+*::before, *::after {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Force navigation to be visible */
+.nav {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  height: 80px !important;
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+.nav .container {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.nav__brand {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.nav__logo-img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.nav__brand-text {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+.nav__menu {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  list-style: none !important;
+  gap: 2rem !important;
+}
+
+.nav__item {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.nav__link {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav__cta {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
