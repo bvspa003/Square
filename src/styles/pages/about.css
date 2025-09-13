@@ -106,6 +106,9 @@
   background: rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius-lg);
   backdrop-filter: blur(10px);
+  /* Ensure stats are visible even if JS doesn't load */
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .about-hero__stats .stat {
