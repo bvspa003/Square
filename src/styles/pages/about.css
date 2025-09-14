@@ -33,12 +33,25 @@
   color: var(--color-gray-700) !important;
 }
 
-/* For dark background sections (hero) - keep white text */
-.about-hero,
-.about-hero *,
+/* For dark background sections (story) - keep white text */
 .story,
 .story * {
   color: var(--color-white) !important;
+}
+
+/* For light background sections (hero) - use dark text */
+.about-hero,
+.about-hero * {
+  color: #000000 !important;
+}
+
+/* Specific dark text rules for about hero elements */
+.about-hero__title {
+  color: #000000 !important;
+}
+
+.about-hero__subtitle {
+  color: #333333 !important;
 }
 
 /* === ABOUT HERO === */
@@ -114,22 +127,22 @@
 .about-hero__stats .stat {
   text-align: center;
   padding: var(--spacing-4);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius-base);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .about-hero__stats .stat__number {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
-  color: #ffffff !important;
+  color: #000000 !important;
   display: block;
   margin-bottom: var(--spacing-2);
 }
 
 .about-hero__stats .stat__label {
   font-size: var(--font-size-sm);
-  color: #cccccc !important;
+  color: #666666 !important;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: var(--font-weight-medium);
@@ -425,6 +438,22 @@
   font-weight: var(--font-weight-semibold);
   color: #ffffff !important;
   margin-bottom: var(--spacing-2);
+}
+
+/* Additional specificity for team member names to ensure they stay white */
+.about-page .team-member__name,
+.team-section .team-member__name,
+html .team-member__name,
+body .team-member__name {
+  color: #ffffff !important;
+}
+
+/* Force names to be white with maximum specificity */
+.team-member__name,
+div .team-member__name,
+section .team-member__name {
+  color: white !important;
+  opacity: 1 !important;
 }
 
 .team-member__title {

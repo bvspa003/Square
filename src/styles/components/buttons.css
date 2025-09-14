@@ -48,7 +48,7 @@
 /* Primary Button - Minimalist White */
 .btn--primary {
   background: linear-gradient(135deg, var(--color-white), var(--color-accent-light));
-  color: var(--color-black);
+  color: var(--color-black) !important;
   border-color: var(--color-white);
   box-shadow: var(--shadow-md);
   font-weight: var(--font-weight-semibold);
@@ -58,11 +58,13 @@
   background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
   box-shadow: var(--shadow-md);
   transform: translateY(-1px);
+  color: var(--color-black) !important;
 }
 
 .btn--primary:active {
   transform: translateY(0);
   box-shadow: var(--shadow-sm);
+  color: var(--color-black) !important;
 }
 
 /* Secondary Button - Outlined */
@@ -76,7 +78,7 @@
 .btn--secondary:hover {
   background: var(--color-white);
   border-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-black) !important;
 }
 
 /* Tertiary Button - Ghost */
